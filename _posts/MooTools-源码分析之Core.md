@@ -5,7 +5,7 @@ categories:
 	MooTools
 tags:
 	- 源码分析
----
+---888
 ```javascript
 (function(){
 	//代码被包在一个匿名函数的内部，所以这里的this明确指向全局对象。
@@ -14,7 +14,9 @@ this.MooTools = {
 	version: '1.6.0',
 	build: '529422872adfff401b901b8b6c7ca5114ee95e2b'
 };
-
+```
+<!-- more -->
+```
 // 定义了typeOf, instanceOf两个函数来替代JS原生的typeof和instanceof方法(注意大小写)
 
 //定义typeOf方法(注意O大写！),在原生typeof的基础上做了拓展,判断参数类型
@@ -36,7 +38,8 @@ var typeOf = this.typeOf = function(item){
 	//如果都不满足则返回原生JS typeof运算符的结果："undefined","boolean","string","number","object","function"
 	return typeof item;
 };
-
+```
+```
 //定义instanceOf方法(注意O大写！)，在原生instanceof的基础上做了拓展,判断某个对象是否是某个特定类型的实例
 var instanceOf = this.instanceOf = function(item, object){
 	//如果对象为null则返回false
@@ -53,7 +56,8 @@ var instanceOf = this.instanceOf = function(item, object){
 	//如果都不满足则返回原生JS typeof运算符的结果
 	return item instanceof object;
 };
-
+```
+```
 var hasOwnProperty = Object.prototype.hasOwnProperty;
 
 /*<ltIE8>*/
